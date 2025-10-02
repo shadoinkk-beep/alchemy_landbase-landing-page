@@ -128,7 +128,7 @@ const FarmhouseProjects: React.FC = () => {
                     serenity, and legacy combined.
                   </p>
                 </div>
-                <button className="px-6 py-2 rounded-full w-fit border border-black hover:bg-black hover:text-white transition">
+                <button className="px-6 py-2 cursor-pointer rounded-full w-fit border border-black hover:bg-black hover:text-white transition">
                   Discover More
                 </button>
               </motion.div>
@@ -152,7 +152,7 @@ const FarmhouseProjects: React.FC = () => {
                 <div className="px-6 pb-6">
                   <h4 className="text-2xl font-semibold">{project.name}</h4>
                   <p className="text-gray-500 mb-4">{project.subtitle}</p>
-                  <button className="px-6 py-2 rounded-full border border-black hover:bg-black hover:text-white transition">
+                  <button className="px-6 py-2 cursor-pointer rounded-full border border-black hover:bg-black hover:text-white transition">
                     Explore Project →
                   </button>
                 </div>
