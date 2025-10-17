@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 type Project = {
   id: number;
@@ -8,32 +9,35 @@ type Project = {
   subtitle: string;
   description: string;
   images: string[];
+  url:string,
 };
 
 const projects: Project[] = [
   {
     id: 1,
-    name: "Project One",
-    subtitle: "Farmhouse in Hills",
+    name: "Whispering Woods",
+    subtitle: "Naogaon, Delhi - Mumbai Expressway",
     description:
-      "Whether it’s weekend getaways with family or a long-term legacy investment, your farmhouse will always give back more than you expect.",
+      "Experience the pinnacle of luxury living at Whispering Woods Luxury Micro Farmhouses by Ram Rattan Group",
     images: [
-      "https://picsum.photos/600/400?random=11",
-      "https://picsum.photos/600/400?random=12",
-      "https://picsum.photos/600/400?random=13",
+      "/WhisperingWoods/1.jpg",
+      "/WhisperingWoods/2.webp",
+      "/WhisperingWoods/3.png",
     ],
+    url:"https://www.tribegroup.in/projects/whisperingwoods",
   },
   {
     id: 2,
-    name: "Project Two",
-    subtitle: "Farmhouse by Lake",
+    name: "Ananta",
+    subtitle: "Off Delhi - Jaipur Expressway",
     description:
-      "With Alchemy Lanbase, your farmhouse isn’t just space—it’s freedom, serenity, and legacy combined.",
+      "The rustic blue beautifully contrasting with porcelain white overlooking a vista of greens and a cool blue pool, the farmhouse design is inspired by the Greek island houses in Santorini.",
     images: [
-      "https://picsum.photos/600/400?random=21",
-      "https://picsum.photos/600/400?random=22",
-      "https://picsum.photos/600/400?random=23",
+      "/Ananta/1.webp",
+      "/Ananta/2.webp",
+      "/Ananta/3.webp",
     ],
+    url:"https://www.tribegroup.in/projects/ananta"
   },
 ];
 
@@ -54,7 +58,7 @@ const FarmhouseProjects: React.FC = () => {
   };
 
   return (
-    <section className="container_section">
+    <section id="our-projects" className="container_section">
       <div className="container_content">
         {/* Section Heading */}
         <motion.h2
@@ -77,7 +81,7 @@ const FarmhouseProjects: React.FC = () => {
           viewport={{ once: false }}
         >
           {/* LEFT SIDE: Main image + thumbnails */}
-          <div className="col-span-2 relative w-full max-w-[450px]">
+          <div className="col-span-3 sm:col-span-2 relative w-full sm:max-w-[450px]">
             <AnimatePresence mode="wait">
               <motion.img
                 key={project.id + "-" + imageIndex}
@@ -109,7 +113,7 @@ const FarmhouseProjects: React.FC = () => {
 
           {/* RIGHT SIDE: Cards + bottom row */}
           <div className="col-span-3 flex flex-col justify-between h-full">
-            <div className="flex gap-6 mb-6">
+            <div className="grid  sm:flex gap-6 mb-6">
               {/* First Card */}
               <motion.div
                 key={project.id + "-middle"}
@@ -128,9 +132,9 @@ const FarmhouseProjects: React.FC = () => {
                     serenity, and legacy combined.
                   </p>
                 </div>
-                <button className="px-6 py-2 cursor-pointer rounded-full w-fit border border-black hover:bg-black hover:text-white transition">
+                <Link href={"/projects"} className="px-6 py-2 mt-2 cursor-pointer rounded-full w-fit border border-black hover:bg-black hover:text-white transition">
                   Discover More
-                </button>
+                </Link>
               </motion.div>
 
               {/* Second Card */}
@@ -152,9 +156,9 @@ const FarmhouseProjects: React.FC = () => {
                 <div className="px-6 pb-6">
                   <h4 className="text-2xl font-semibold">{project.name}</h4>
                   <p className="text-gray-500 mb-4">{project.subtitle}</p>
-                  <button className="px-6 py-2 cursor-pointer rounded-full border border-black hover:bg-black hover:text-white transition">
+                  <Link target="_blank" href={project.url} className="px-6 py-2 cursor-pointer rounded-full border border-black hover:bg-black hover:text-white transition">
                     Explore Project →
-                  </button>
+                  </Link >
                 </div>
               </motion.div>
             </div>

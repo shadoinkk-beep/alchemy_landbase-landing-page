@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { FaShieldAlt, FaUsers, FaMapMarkerAlt, FaChartLine } from "react-icons/fa";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -99,7 +100,7 @@ const WhyUs: React.FC = () => {
   };
 
   return (
-    <motion.section className="container_section" initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }} variants={headerVariants}>
+    <motion.section id="Why-Us" className="container_section" initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.2 }} variants={headerVariants}>
       <div className="container_content">
         <div className="px-4">
           {/* Header */}
@@ -118,12 +119,16 @@ const WhyUs: React.FC = () => {
                 in every project.
               </p>
               <div className="flex space-x-4">
+                <Link href={"#our-vision"} >
                 <motion.button className="button_black_bg" whileHover={{ scale: 1.05 }}>
                   Know More
                 </motion.button>
+                </Link>
+                <Link href={"/projects"} >
                 <motion.button className="button_white_bg" whileHover={{ scale: 1.05 }}>
                   Our Projects
                 </motion.button>
+                </Link>
               </div>
             </motion.div>
           </motion.div>

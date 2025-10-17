@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://dreamhomes.com",
+  siteUrl: "https://alchemylandbase.com",
   generateRobotsTxt: true,
   sitemapSize: 5000,
   changefreq: "weekly",

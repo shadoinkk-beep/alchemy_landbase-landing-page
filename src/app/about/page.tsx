@@ -5,20 +5,20 @@ import CircularTextDesc from "@/components/common/CircularTextDesc";
 import Contact from "@/components/common/Contact";
 
 export const metadata = {
-  title: "About Us – DreamHomes Realty",
+  title: "About Us – Alchemy Landbase",
   description:
-    "Learn about DreamHomes Realty, our mission, and 10+ years of trusted real estate service.",
+    "Learn about Alchemy Landbase, our mission, and 10+ years of trusted real estate service.",
   openGraph: {
-    title: "About DreamHomes Realty",
+    title: "About Alchemy Landbase",
     description:
       "Trusted real estate experts helping families find their dream homes for over a decade.",
-    url: "https://dreamhomes.com/about",
+    url: "https://alchemylandbase.com/about",
     images: [
       {
-        url: "https://dreamhomes.com/og/about.jpg",
+        url: "https://alchemylandbase.com/hero_BG_IMG_Large.png",
         width: 1200,
         height: 630,
-        alt: "DreamHomes Realty Team",
+        alt: "Alchemy Landbase Team",
       },
     ],
     type: "article",

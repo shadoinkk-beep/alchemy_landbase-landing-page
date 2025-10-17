@@ -15,21 +15,21 @@ const principles: Principle[] = [
     title: "Commitment to Transparency",
     description:
       "We believe trust begins with clarity. That’s why every document, title, and approval is shared upfront with our investors. No hidden clauses, no vague promises—only full disclosure at every step.",
-    image: "https://picsum.photos/600/400?random=41",
+    image: "/principles/long_lasting.jpg",
   },
   {
     id: 2,
     title: "Sustainable Development",
     description:
       "Every farmhouse is built with sustainability in mind—from eco-friendly materials to energy-efficient design. We believe in leaving behind not just homes, but a healthier planet.",
-    image: "https://picsum.photos/600/400?random=42",
+    image: "/principles/transparency.jpg",
   },
   {
     id: 3,
     title: "Lasting Value",
     description:
       "A farmhouse is not just a property, it’s a legacy. Our developments are designed to appreciate in value, giving families both emotional and financial returns.",
-    image: "https://picsum.photos/600/400?random=43",
+    image: "/principles/commitment.png",
   },
 ];
 
@@ -49,7 +49,7 @@ const PrinciplesSection: React.FC = () => {
   // }, []);
 
   return (
-    <section className="container_section">
+    <section id="our-principles" className="container_section">
       <div className="container_content">
         <div className="grid md:grid-cols-2 gap-10 w-full items-center">
           {/* LEFT CONTENT */}

@@ -40,9 +40,9 @@ const MemberCard: React.FC<MemberCardProps> = ({
       whileHover={{ scale: 1.03 }}
       transition={{ duration: 0.4 }}
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-full overflow-hidden">
         {/* Left Half: Image or Placeholder */}
-        <div className="bg-black flex items-center justify-center p-4">
+        <div className="bg-black  flex items-center justify-center p-0 overflow-hidden rounded-lg">
           {imageSrc ? (
             <img
               src={imageSrc}
@@ -102,7 +102,7 @@ const ExclusiveMembersSection: React.FC = () => {
             description="Ishmeet Singh Raina, Co-Founder of Alchemy Landbase, brings deep expertise in land acquisition and farmhouse development. His vision centers on transparency, legal integrity, and creating long-term value for investors."
           />
           <MemberCard
-            imageSrc="/Ishmeet Singh Rana.png"
+            imageSrc="/vision_charu_verma.png"
             imageAlt="Charu Verma"
             name="Charu Verma"
             title="Co-Founder of Alchemy Landbase"

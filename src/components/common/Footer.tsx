@@ -22,9 +22,9 @@ interface LinkGroup {
 const companyLinks: LinkGroup = {
   title: 'Company',
   links: [
-    { label: 'Our LinkedIn', href: '#' },
-    { label: 'Our Projects', href: '#' },
-    { label: 'About Us', href: '#' },
+    { label: 'Our LinkedIn', href: 'https://www.linkedin.com/company/alchemy-landbase/' },
+    { label: 'Our Projects', href: '/projects' },
+    { label: 'About Us', href: '/about' },
   ],
 };
 

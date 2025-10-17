@@ -85,13 +85,13 @@ const StatCard: React.FC<StatCardProps> = ({
       {/* Card content */}
       <div className="absolute inset-0 flex flex-col justify-between p-6 text-white w-full">
         <motion.h3
-          className="text-5xl md:text-6xl font-normal mb-4 leading-none"
+          className="text-7xl sm:text-5xl md:text-6xl font-normal mb-4 leading-none"
           variants={numberVariants}
         >
           {number}
         </motion.h3>
         <motion.p
-          className="text-lg font-light flex items-center space-x-2"
+          className="text-2xl sm:text-lg font-light flex items-center space-x-2"
           variants={descVariants}
         >
           <FaCircle className="w-2 h-2 text-white/80" />
@@ -142,6 +142,7 @@ const FarmhouseStatsSection: React.FC = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.2 }}
+      id="stats"
     >
       <div className="container_content">
         {/* Header Section */}

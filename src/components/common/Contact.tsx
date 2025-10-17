@@ -30,7 +30,7 @@ export default function Contact() {
     <div className="container_content">
       <div className="grid md:grid-cols-2 w-full justify-center rounded-2xl overflow-hidden">
         {/* Left Section */}
-        <div style={{background:`url("/contact_bg.jpg")`}} className="flex items-start justify-start bg-black text-white p-10 ">
+        <div style={{background:`url("/contact_bg.jpg")`,backgroundSize:"cover"}} className="flex items-start justify-start bg-black text-white p-10 ">
           <h2 className="text-3xl font-semibold leading-snug max-w-xs">
             Turn open land into a timeless retreat for your family.
           </h2>

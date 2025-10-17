@@ -28,10 +28,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: project?.title ?? "DreamHomes Project",
       description: project?.desc ?? "Premium real estate listing.",
-      url: `https://dreamhomes.com/projects/${params.slug}`,
+      url: `https://alchemylandbase.com/projects/${params.slug}`,
       images: [
         {
-          url: `https://dreamhomes.com/og/${params.slug}.jpg`,
+          url: `https://alchemylandbase.com/og/${params.slug}.jpg`,
           width: 1200,
           height: 630,
           alt: project?.title,
@@ -53,16 +53,16 @@ export default function ProjectPage({ params }: Props) {
     "description": project.desc,
     "brand": {
       "@type": "RealEstateAgent",
-      "name": "DreamHomes Realty",
+      "name": "Alchemy Landbase",
     },
     "offers": {
       "@type": "Offer",
-      "url": `https://dreamhomes.com/projects/${params.slug}`,
+      "url": `https://alchemylandbase.com/projects/${params.slug}`,
       "priceCurrency": "INR",
       "price": project.price,
       "availability": "https://schema.org/InStock",
     },
-    "image": [`https://dreamhomes.com/images/${params.slug}.jpg`],
+    "image": [`https://alchemylandbase.com/images/${params.slug}.jpg`],
   };
 
   const breadcrumbSchema = {
@@ -73,19 +73,19 @@ export default function ProjectPage({ params }: Props) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://dreamhomes.com/",
+        "item": "https://alchemylandbase.com/",
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Projects",
-        "item": "https://dreamhomes.com/projects",
+        "item": "https://alchemylandbase.com/projects",
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": project.title,
-        "item": `https://dreamhomes.com/projects/${params.slug}`,
+        "item": `https://alchemylandbase.com/projects/${params.slug}`,
       },
     ],
   };

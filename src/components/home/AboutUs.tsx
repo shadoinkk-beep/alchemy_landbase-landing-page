@@ -2,6 +2,7 @@
 import React from "react";
 import { FaRegMap, FaRegCheckCircle, FaChartLine, FaRegLightbulb } from "react-icons/fa";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 const AboutUs: React.FC = () => {
   // Variants
@@ -38,7 +39,7 @@ const AboutUs: React.FC = () => {
       viewport={{ once: false, amount: 0.2 }}
       variants={containerVariants}
     >
-      <div className="container_content grid gap-8">
+      <div id="our-vision" className="container_content grid gap-8">
 
         {/* Heading and Intro */}
         <motion.div
@@ -56,21 +57,25 @@ const AboutUs: React.FC = () => {
               we create spaces that bring together nature, luxury, and security.
             </motion.p>
 
-            <div className="flex gap-4 mt-6">
+            <div className="flex gap-2 mt-6">
+              <Link href={"/about"} >
               <motion.button
                 className="button_black_bg"
                 variants={buttonVariants}
                 whileHover="hover"
-              >
+                >
                 Know More
               </motion.button>
+                </Link>
+              <Link href={"/projects"}>
               <motion.button
                 className="button_white_bg"
                 variants={buttonVariants}
                 whileHover="hover"
-              >
+                >
                 Our Projects
               </motion.button>
+                </Link>
             </div>
           </motion.div>
         </motion.div>
@@ -80,7 +85,7 @@ const AboutUs: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-4 gap-8"
           variants={containerVariants}
         >
-          <motion.div className="flex flex-col items-start gap-3 border-r md:pr-6 last:border-r-0 py-8" variants={columnVariants}>
+          <motion.div className="flex flex-col items-start gap-3 sm:border-r md:pr-6 last:border-r-0 py-8" variants={columnVariants}>
             <FaRegMap className="text-yellow-600 text-2xl" />
             <h3 className="text-lg font-semibold">Land Acquisition</h3>
             <p className="text-sm text-gray-600">
@@ -88,7 +93,7 @@ const AboutUs: React.FC = () => {
             </p>
           </motion.div>
 
-          <motion.div className="flex flex-col items-start gap-3 border-r md:pr-6 last:border-r-0 py-8" variants={columnVariants}>
+          <motion.div className="flex flex-col items-start gap-3 sm:border-r md:pr-6 last:border-r-0 py-8" variants={columnVariants}>
             <FaRegCheckCircle className="text-yellow-600 text-2xl" />
             <h3 className="text-lg font-semibold">Due Diligence</h3>
             <p className="text-sm text-gray-600">
@@ -96,7 +101,7 @@ const AboutUs: React.FC = () => {
             </p>
           </motion.div>
 
-          <motion.div className="flex flex-col items-start gap-3 border-r md:pr-6 last:border-r-0 py-8" variants={columnVariants}>
+          <motion.div className="flex flex-col items-start gap-3 sm:border-r md:pr-6 last:border-r-0 py-8" variants={columnVariants}>
             <FaChartLine className="text-yellow-600 text-2xl" />
             <h3 className="text-lg font-semibold">Sales Strategy</h3>
             <p className="text-sm text-gray-600">
