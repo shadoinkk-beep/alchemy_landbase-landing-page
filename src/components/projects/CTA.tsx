@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const ExperienceSection: React.FC = () => {
   return (
-    <section className="container_section !py-32">
+    <section className="container_section">
       <div className="container_content grid justify-center justify-items-center text-center">
         <motion.h2
           className="text-4xl md:text-5xl font-normal text-gray-900 mb-4"

@@ -59,7 +59,7 @@ const LandbaseIntro: React.FC = () => {
         {/* Description */}
         <motion.p
           variants={fadeUp}
-          className="text-[0.95rem] md:text-[1rem] text-black/80 leading-relaxed mt-8"
+          className="text-[0.95rem] md:text-[1rem] text-justify text-black/80 leading-relaxed mt-8"
         >
           Each Alchemy Landbase project represents more than just development — it’s the
           embodiment of our philosophy: to create farmhouses that are secure, beautiful,
@@ -91,7 +91,7 @@ const LandbaseIntro: React.FC = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
-        className="container_content mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-black"
+        className="container_content -mt-6 !pt-0 grid grid-cols-1 md:grid-cols-2 gap-6 text-black"
       >
         {/* Project Card 1 */}
         <motion.div
