@@ -2,6 +2,7 @@
 import React from "react";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
+import { Textfit } from "@outofaxis/react-textfit";
 
 const Hero: React.FC = () => {
   const headingVariants: Variants = {
@@ -22,24 +23,35 @@ const Hero: React.FC = () => {
   return (
     <section className="container_section">
       <main className="container_content">
-        <div className="flex flex-col md:flex-row items-start justify-between">
+        <div className="flex flex-col md:flex-row  justify-between items-end ">
           {/* Left Side Heading */}
           <motion.div
-            className="md:w-1/2 text-center md:text-left"
+            className="w-full md:w-3/5  text-center md:text-left"
             variants={headingVariants}
             initial="hidden"
             animate="visible" // 👈 immediate animation on load
           >
-            <h1 className="text-6xl font-extrabold leading-tight">
+            <h1 className="text-6xl font-normal leading-tight impact-font">
+              <Textfit mode="single" className="w-[70%] sm:w-[55%]"   max={200}>
+
               <span className="text-black block">WHERE LAND</span>
-              <span className="text-black block">MEETS</span>
-              <span className="text-yellow-600 block">ALCHEMY</span>
+              </Textfit>
+              {/* <div className="sm:whitespace-nowrap">
+
+              <span className="text-black ">MEETS </span>
+              <span className="text-yellow-600">ALCHEMY</span>
+              </div> */}
+              <Textfit className="w-[100%] sm:w-[80%]" mode="single"    max={200}>
+
+              <span className="text-black ">MEETS </span>
+              <span className="text-yellow-600">ALCHEMY</span>
+              </Textfit>
             </h1>
           </motion.div>
 
           {/* Right Side Content */}
           <motion.div
-            className="md:w-1/2 mt-8 md:mt-0 flex flex-col items-center md:items-start gap-6"
+            className="w-full md:w-2/5  mt-8 md:mt-0 flex flex-col items-start gap-6 mb-8"
             variants={contentVariants}
             initial="hidden"
             animate="visible"
@@ -49,7 +61,7 @@ const Hero: React.FC = () => {
               delivers farmhouses built with transparency, trust, and unmatched craftsmanship.
             </p>
 
-            <div className="flex gap-4">
+            <div className="flex gap-4 ">
               <Link href={"#stats"}>
               <motion.button className="button_black_bg" whileHover={{ scale: 1.05 }}>
                 Our Legacy

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@outofaxis/react-textfit": "^1.1.7",
     "@tailwindcss/postcss": "^4.1.13",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
