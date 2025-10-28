@@ -5,6 +5,7 @@ import Footer from "@/components/common/Footer";
 import Script from "next/script";
 import { Suspense } from "react";
 import GoogleAnalytics from "./providers";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: {
@@ -96,6 +97,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar/>
         <main>{children}</main>
       <Footer/>
+      <Toaster
+          position="top-right"
+          toastOptions={{
+            success: {
+              style: {
+                background: "#16a34a",
+                color: "white",
+              },
+            },
+            error: {
+              style: {
+                background: "#dc2626",
+                color: "white",
+              },
+            },
+          }}
+        />
         {/* JSON-LD Schema */}
         <script
           type="application/ld+json"

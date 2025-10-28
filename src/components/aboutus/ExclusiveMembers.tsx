@@ -106,7 +106,7 @@ const ExclusiveMembersSection: React.FC = () => {
             imageAlt="Charu Verma"
             name="Charu Verma"
             title="Co-Founder of Alchemy Landbase"
-            description="Charu Verma, Co-Founder of Alchemy Landbase, brings deep expertise in land acquisition and farmhouse development. Her vision centers on transparency, legal integrity, and creating long-term value for investors."
+            description="Over the past two decades, I have been dedicated to building a company that is synonymous with quality, integrity, and customer satisfaction. As a co-founder and partner, I have played a key role in shaping our vision, mission, and values, and I am proud of the progress we have made. My vision for the company's future is one of continued innovation, expansion, and excellence, and I am committed to working tirelessly to ensure that we achieve our goals and make a lasting impact on our industry."
           />
         </motion.div>
       </div>
