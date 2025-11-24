@@ -95,14 +95,14 @@ const ExclusiveMembersSection: React.FC = () => {
         {/* Member Cards Grid */}
         <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-8" variants={containerVariants}>
           <MemberCard
-            imageSrc="/Ishmeet Singh Rana.png"
+            imageSrc="/Ishmeet Singh Rana.jpg"
             imageAlt="Ishmeet Singh Raina"
             name="Ishmeet Singh Raina"
             title="Co-Founder of Alchemy Landbase"
             description="Ishmeet Singh Raina, Co-Founder of Alchemy Landbase, brings deep expertise in land acquisition and farmhouse development. His vision centers on transparency, legal integrity, and creating long-term value for investors."
           />
           <MemberCard
-            imageSrc="/vision_charu_verma.png"
+            imageSrc="/vision_charu_verma.jpg"
             imageAlt="Charu Verma"
             name="Charu Verma"
             title="Co-Founder of Alchemy Landbase"
