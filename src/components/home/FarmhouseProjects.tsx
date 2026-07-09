@@ -18,7 +18,7 @@ const projects: Project[] = [
     name: "Whispering Woods",
     subtitle: "Naogaon, Delhi - Mumbai Expressway",
     description:
-      "Experience the pinnacle of luxury living at Whispering Woods Luxury Micro Farmhouses by Ram Rattan Group",
+      "Experience the pinnacle of luxury living at Whispering Woods Luxury Micro Farmhouses",
     images: [
       "/WhisperingWoods/1.jpg",
       "/WhisperingWoods/2.webp",
