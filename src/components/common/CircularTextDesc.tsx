@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { FaCircle } from "react-icons/fa";
 import { motion } from "framer-motion";
 import CircularText from "../CircularText";
 import { Variants } from "framer-motion";
@@ -32,12 +31,12 @@ const  CircularTextDesc: React.FC = () => {
 
   return (
     <motion.section
-      className="container_section "
+      className="container_section !py-0"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.2 }}
     >
-      <div className="container_content !py-0">
+      <div className="container_content !py-10 md:!py-14">
         {/* Header Section */}
         <motion.div
           className="flex flex-col lg:flex-row flex-nowrap lg:items-center content-between justify-center md:justify-between lg:space-x-12 "

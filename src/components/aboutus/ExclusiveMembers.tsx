@@ -1,117 +1,163 @@
 "use client";
-import React from "react";
-import { motion, Variants } from "framer-motion";
 
-// --- Interface for Member Card Props ---
+import Image from "next/image";
+import { motion, type Variants } from "framer-motion";
+
 interface MemberCardProps {
-  imageSrc?: string; 
+  imageSrc?: string;
   imageAlt: string;
+  initials: string;
   name: string;
   title: string;
   description: string;
+  featured?: boolean;
 }
 
-// --- Motion Variants ---
 const containerVariants: Variants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.2 } },
+  visible: { transition: { staggerChildren: 0.14 } },
 };
 
 const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, ease: "easeOut" },
+  },
 };
 
-// --- Member Card Component ---
-const MemberCard: React.FC<MemberCardProps> = ({
+const members: MemberCardProps[] = [
+  {
+    imageSrc: "/Ishmeet Singh Rana.jpg",
+    imageAlt: "Ishmeet Singh Raina",
+    initials: "IR",
+    name: "Ishmeet Singh Raina",
+    title: "Founder",
+    description:
+      "Ishmeet Singh Raina, Founder of Alchemy Landbase, brings deep expertise in land acquisition and farmhouse development. His vision centers on transparency, legal integrity, and creating long-term value for investors. With a leadership approach grounded in due diligence and customer clarity, he guides each project from opportunity identification through development planning. His work focuses on shaping carefully selected land into secure, sustainable communities that can become lasting family legacies.",
+    featured: true,
+  },
+  {
+    imageAlt: "Photo placeholder for Prateek Joshi",
+    initials: "PJ",
+    name: "Prateek Joshi",
+    title: "Senior Director",
+    description:
+      "As Senior Director, Prateek Joshi supports Alchemy Landbase's strategic growth and the execution of transparent, future-ready land communities.",
+  },
+  {
+    imageAlt: "Photo placeholder for Harshit Bhardwaj",
+    initials: "HB",
+    name: "Harshit Bhardwaj",
+    title: "Senior Manager, Sales",
+    description:
+      "As Senior Manager - Sales, Harshit Bhardwaj helps clients understand each opportunity clearly and guides them through a transparent, considered buying journey.",
+  },
+];
+
+function MemberCard({
   imageSrc,
   imageAlt,
+  initials,
   name,
   title,
   description,
-}) => {
+  featured = false,
+}: MemberCardProps) {
   return (
-    <motion.div
-      className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 h-full"
+    <motion.article
+      className={`group overflow-hidden rounded-2xl border border-black/10 bg-white/75 shadow-[0_18px_50px_rgba(75,61,26,0.08)] ${
+        featured ? "lg:col-span-2" : ""
+      }`}
       variants={fadeUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
-      whileHover={{ scale: 1.03 }}
-      transition={{ duration: 0.4 }}
+      whileHover={{ y: -5 }}
+      transition={{ duration: 0.3 }}
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-full overflow-hidden">
-        {/* Left Half: Image or Placeholder */}
-        <div className="bg-black  flex items-center justify-center p-0 overflow-hidden rounded-lg">
+      <div
+        className={`grid h-full grid-cols-1 sm:grid-cols-[minmax(220px,0.85fr)_1.15fr] ${
+          featured ? "lg:grid-cols-[minmax(320px,0.58fr)_1.42fr]" : ""
+        }`}
+      >
+        <div
+          className={`relative min-h-72 overflow-hidden bg-black ${
+            featured ? "sm:min-h-[540px]" : "sm:min-h-[340px]"
+          }`}
+        >
           {imageSrc ? (
-            <img
+            <Image
               src={imageSrc}
               alt={imageAlt}
-              className="w-full h-full object-cover rounded-lg"
+              fill
+              sizes={
+                featured ? "(min-width: 1024px) 38vw, 50vw" : "(min-width: 1024px) 22vw, 50vw"
+              }
+              className="object-cover object-top transition duration-500 group-hover:scale-[1.02]"
             />
           ) : (
-            <div className="w-full h-full bg-black"></div>
+            <div
+              className={`flex h-full min-h-72 flex-col items-center justify-center bg-[radial-gradient(circle_at_50%_25%,#4B3D1A_0%,#19160f_45%,#050505_100%)] px-6 text-center text-[#EFCC6E] ${
+                featured ? "sm:min-h-[540px]" : "sm:min-h-[340px]"
+              }`}
+              role="img"
+              aria-label={imageAlt}
+            >
+              <span className="text-6xl font-light tracking-[0.08em]" aria-hidden="true">
+                {initials}
+              </span>
+              <span className="mt-5 border-t border-[#EFCC6E]/50 pt-4 text-xs uppercase tracking-[0.24em] text-white/65">
+                Photo coming soon
+              </span>
+            </div>
           )}
         </div>
 
-        {/* Right Half: Text Content */}
-        <div className="p-8 flex flex-col justify-between">
-          <div>
-            <p className="text-gray-700 text-sm leading-relaxed mb-6">{description}</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold text-gray-900">{name}</h3>
-            <p className="text-gray-600 text-sm">{title}</p>
+        <div className="flex min-h-[300px] flex-col justify-between p-7 sm:p-9 lg:p-10">
+          <p className="max-w-2xl text-[0.95rem] leading-7 text-gray-600 sm:text-base">
+            {description}
+          </p>
+
+          <div className="mt-10 border-t border-black/10 pt-6">
+            <span className="mb-3 inline-flex rounded-full border border-[#B47F2B]/25 bg-[#EFCC6E]/12 px-2.5 py-0.5 text-[0.62rem] font-medium uppercase tracking-[0.14em] text-[#765013] shadow-[0_4px_14px_rgba(180,127,43,0.16)]">
+              {title}
+            </span>
+            <h3 className="text-2xl font-semibold tracking-tight text-gray-900">{name}</h3>
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
-};
+}
 
-// --- Main Component ---
-const ExclusiveMembersSection: React.FC = () => {
+export default function ExclusiveMembersSection() {
   return (
     <motion.section
-      className="container_section"
+      className="container_section !py-0"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.12 }}
       variants={containerVariants}
     >
-      <div className="container_content">
-        {/* Section Heading and Subtext */}
-        <motion.div className="mb-12 lg:mb-16" variants={fadeUp}>
-          <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900 leading-tight mb-4">
-            Our exclusive members
+      <div className="container_content !py-12 md:!py-16 lg:!py-20">
+        <motion.div className="mb-10 max-w-3xl lg:mb-14" variants={fadeUp}>
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#9A6A1D]">
+            The people behind Alchemy
+          </p>
+          <h2 className="mb-5 text-4xl font-semibold leading-tight tracking-tight text-gray-900 lg:text-5xl">
+            Our leadership team
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl leading-relaxed">
-            Behind every project is a vision shaped by experience and integrity. Our promoters bring
-            decades of expertise, credibility, and commitment to building secure, future-ready
-            communities.
+          <p className="text-lg leading-relaxed text-gray-600">
+            Every project is shaped by experienced leadership, transparent guidance, and a shared
+            commitment to building secure, future-ready land communities.
           </p>
         </motion.div>
 
-        {/* Member Cards Grid */}
-        <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-8" variants={containerVariants}>
-          <MemberCard
-            imageSrc="/Ishmeet Singh Rana.jpg"
-            imageAlt="Ishmeet Singh Raina"
-            name="Ishmeet Singh Raina"
-            title="Co-Founder of Alchemy Landbase"
-            description="Ishmeet Singh Raina, Co-Founder of Alchemy Landbase, brings deep expertise in land acquisition and farmhouse development. His vision centers on transparency, legal integrity, and creating long-term value for investors."
-          />
-          <MemberCard
-            imageSrc="/vision_charu_verma.jpg"
-            imageAlt="Charu Verma"
-            name="Charu Verma"
-            title="Co-Founder of Alchemy Landbase"
-            description="Over the past two decades, I have been dedicated to building a company that is synonymous with quality, integrity, and customer satisfaction. As a co-founder and partner, I have played a key role in shaping our vision, mission, and values, and I am proud of the progress we have made. My vision for the company's future is one of continued innovation, expansion, and excellence, and I am committed to working tirelessly to ensure that we achieve our goals and make a lasting impact on our industry."
-          />
+        <motion.div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8" variants={containerVariants}>
+          {members.map((member) => (
+            <MemberCard key={member.name} {...member} />
+          ))}
         </motion.div>
       </div>
     </motion.section>
   );
-};
-
-export default ExclusiveMembersSection;
+}

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 type Principle = {
@@ -49,8 +49,8 @@ const PrinciplesSection: React.FC = () => {
   // }, []);
 
   return (
-    <section id="our-principles" className="container_section">
-      <div className="container_content">
+    <section id="our-principles" className="container_section !py-0 scroll-mt-20">
+      <div className="container_content !py-12 md:!py-16 lg:!py-20">
         <div className="grid md:grid-cols-2 gap-10 w-full items-center">
           {/* LEFT CONTENT */}
           <motion.div

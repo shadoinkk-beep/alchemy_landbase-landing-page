@@ -27,13 +27,12 @@ export const metadata = {
 
 export default function About() {
   return (
-    <>
-    <FarmhouseDevelopmentSection/>
-    <CircularTextDesc/>
-
-    <PrinciplesSection/>
-    <ExclusiveMembersSection/>
-    <Contact/>
-    </>
+    <div className="pt-16">
+      <FarmhouseDevelopmentSection />
+      <CircularTextDesc />
+      <PrinciplesSection />
+      <ExclusiveMembersSection />
+      <Contact />
+    </div>
   );
 }

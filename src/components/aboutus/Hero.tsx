@@ -2,6 +2,7 @@
 import React from "react";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 // --- Interface for Stat Cards ---
 interface StatCardProps {
@@ -65,9 +66,12 @@ const StatCard: React.FC<StatCardProps> = ({
   >
     {/* Circular Image */}
     <div className="flex justify-start absolute top-0 left-4 translate-y-[-50%]">
-      <img
+      <Image
         src={imageSrc}
         alt={imageAlt}
+        width={64}
+        height={64}
+        sizes="64px"
         className="w-16 h-16 rounded-full object-cover border-2 border-white shadow-sm"
       />
     </div>
@@ -84,13 +88,13 @@ const StatCard: React.FC<StatCardProps> = ({
 const FarmhouseDevelopmentSection: React.FC = () => {
   return (
     <motion.section
-      className="container_section"
+      className="container_section !py-0"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.3 }}
       variants={headerVariants}
     >
-      <div className="container_content">
+      <div className="container_content !py-12 md:!py-16 lg:!py-20">
         {/* Main Content Grid: Left Text/Stats, Right Image */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Column */}
@@ -173,9 +177,11 @@ const FarmhouseDevelopmentSection: React.FC = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
           >
-            <img
+            <Image
               src="/AboutPage_Hero.png"
               alt="Beautiful farmhouse in a serene landscape"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
               className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg"
             />
           </motion.div>
