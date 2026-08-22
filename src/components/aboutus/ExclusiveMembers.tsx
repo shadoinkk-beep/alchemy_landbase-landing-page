@@ -117,11 +117,9 @@ function MemberCard({
             {description}
           </p>
 
-          <div className="mt-10 border-t border-black/10 pt-6">
-            <span className="mb-3 inline-flex rounded-full border border-[#B47F2B]/25 bg-[#EFCC6E]/12 px-2.5 py-0.5 text-[0.62rem] font-medium uppercase tracking-[0.14em] text-[#765013] shadow-[0_4px_14px_rgba(180,127,43,0.16)]">
-              {title}
-            </span>
+          <div className="mt-10">
             <h3 className="text-2xl font-semibold tracking-tight text-gray-900">{name}</h3>
+            <p className="mt-1 text-sm text-gray-600">{title}</p>
           </div>
         </div>
       </div>
