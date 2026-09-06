@@ -150,7 +150,7 @@ const Footer: React.FC = () => {
         {/* Copyright and Legal Links */}
         <div className="flex flex-col sm:flex-row justify-between items-center pt-6 text-sm">
           <p className="text-gray-600 mb-2 sm:mb-0">
-            © 2025 Alchemy Landbase LLP
+            © 2023 Alchemy Landbase
           </p>
           <div className="flex space-x-6">
             <a
