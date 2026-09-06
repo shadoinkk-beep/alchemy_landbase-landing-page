@@ -106,43 +106,58 @@ const Footer: React.FC = () => {
           <FooterLinkColumn group={serviceLinks} />
 
           {/* Contact Us Column */}
-<div className="col-span-2 md:col-span-1">
-            <h4 className="text-lg font-semibold text-gray-800 mb-4">
-              Contact Us
-            </h4>
-            <div className="space-y-3 text-sm text-gray-600">
-              {/* Email */}
-              <div className="flex items-start space-x-2">
-                <FiMail className="text-[#b89547]" />
-                <a
-                  href="mailto:info@alchemylandbase.com"
-                  className="hover:text-[#b89547]"
-                >
-                  info@alchemylandbase.com
-                </a>
-              </div>
-              {/* Phone */}
-              <div className="flex items-start space-x-2">
-                <FiPhone className="text-[#b89547]" />
-                <a
-                  href="tel:+917030062277"
-                  className="hover:text-[#b89547]"
-                >
-                  +91 70300 62277
-                </a>
-              </div>
-              {/* Address */}
-              <div className="flex items-start space-x-2 pt-2">
-                <FiMapPin className="text-[#b89547] flex-shrink-0 mt-1" />
-                <p className="leading-relaxed">
-                  403, Baani Address One,<br />
-                  Sector 56, Golf Course Road,<br />
-                  Gurugram, Haryana - 122011
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+<div className="col-span-full md:col-span-1 w-full">
+  <h4 className="text-lg font-semibold text-gray-800 mb-4">
+    Contact Us
+  </h4>
+
+  <div className="space-y-3 text-sm text-gray-600 w-full">
+
+    {/* Email */}
+    <div className="flex items-center gap-2 w-full">
+      <FiMail className="text-[#b89547] flex-shrink-0" />
+      <a
+        href="mailto:info@alchemylandbase.com"
+        className="hover:text-[#b89547]"
+      >
+        info@alchemylandbase.com
+      </a>
+    </div>
+
+    {/* Phone */}
+    <div className="flex items-center gap-2 w-full">
+      <FiPhone className="text-[#b89547] flex-shrink-0" />
+      <a
+        href="tel:+917030062277"
+        className="hover:text-[#b89547]"
+      >
+        +91 70300 62277
+      </a>
+    </div>
+
+    {/* Address */}
+    <div className="flex items-start gap-2 pt-2 w-full">
+      <FiMapPin className="text-[#b89547] flex-shrink-0 mt-1" />
+
+      <p className="leading-relaxed">
+        <span className="whitespace-nowrap">
+          403, Baani Address One,
+        </span>
+        <br />
+
+        <span className="whitespace-nowrap">
+          Sector 56, Golf Course Road,
+        </span>
+        <br />
+
+        <span className="whitespace-nowrap">
+          Gurugram, Haryana - 122011
+        </span>
+      </p>
+    </div>
+
+  </div>
+</div>
 
         {/* Bottom Separator Line */}
         <div className="border-t border-gray-300 mt-12"></div>
