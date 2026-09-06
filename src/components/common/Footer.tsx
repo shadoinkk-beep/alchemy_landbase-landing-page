@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
           <FooterLinkColumn group={serviceLinks} />
 
           {/* Contact Us Column */}
-          <div>
+<div className="col-span-2 md:col-span-1">
             <h4 className="text-lg font-semibold text-gray-800 mb-4">
               Contact Us
             </h4>
@@ -133,11 +133,11 @@ const Footer: React.FC = () => {
               </div>
               {/* Address */}
               <div className="flex items-start space-x-2 pt-2">
-                <FiMapPin className="text-[#b89547]" />
-                <p>
-                  403, Baani Address One, <br />
-                  Sector 56, Golf Course Road <br />
-                  Gurugram, Haryana-122011
+                <FiMapPin className="text-[#b89547] flex-shrink-0 mt-1" />
+                <p className="leading-relaxed">
+                  403, Baani Address One,<br />
+                  Sector 56, Golf Course Road,<br />
+                  Gurugram, Haryana - 122011
                 </p>
               </div>
             </div>
