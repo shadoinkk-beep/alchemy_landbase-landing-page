@@ -49,9 +49,9 @@ const members: MemberCardProps[] = [
   },
   {
     imageSrc: "/Harshit Bharadwaj.png",
-    imageAlt: "Harshit Bhardwaj",
+    imageAlt: "Harshit Bharadwaj",
     initials: "HB",
-    name: "Harshit Bhardwaj",
+    name: "Harshit Bharadwaj",
     title: "Senior Manager, Sales",
     description:
       "As Senior Manager - Sales, Harshit Bhardwaj helps clients understand each opportunity clearly and guides them through a transparent, considered buying journey.",
