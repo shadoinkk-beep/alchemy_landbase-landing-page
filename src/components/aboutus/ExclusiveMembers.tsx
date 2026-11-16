@@ -39,7 +39,8 @@ const members: MemberCardProps[] = [
     featured: true,
   },
   {
-    imageAlt: "Photo placeholder for Prateek Joshi",
+    imageSrc: "/team/prateek-joshi.webp",
+    imageAlt: "Prateek Joshi",
     initials: "PJ",
     name: "Prateek Joshi",
     title: "Senior Director",
@@ -47,12 +48,30 @@ const members: MemberCardProps[] = [
       "As Senior Director, Prateek Joshi supports Alchemy Landbase's strategic growth and the execution of transparent, future-ready land communities.",
   },
   {
-    imageAlt: "Photo placeholder for Harshit Bhardwaj",
+    imageSrc: "/team/harshit-bhardwaj.webp",
+    imageAlt: "Harshit Bhardwaj",
     initials: "HB",
     name: "Harshit Bhardwaj",
     title: "Senior Manager, Sales",
     description:
       "As Senior Manager - Sales, Harshit Bhardwaj helps clients understand each opportunity clearly and guides them through a transparent, considered buying journey.",
+  },
+  {
+    imageSrc: "/team/akshay-choudhary.webp",
+    imageAlt: "Akshay Choudhary",
+    initials: "AC",
+    name: "Akshay Choudhary",
+    title: "Senior Manager, Sales",
+    description:
+      "Akshay Choudhary brings experience in sales, business development and marketing from Havells, Guesthouser, Accenture and WPP. He has built a network of 300+ property owners and managed advertising campaigns for brands including Uniqlo, Apollo Tyres and Campus Shoes.",
+  },
+  {
+    imageAlt: "Photo placeholder for Sagar Sharma",
+    initials: "SS",
+    name: "Sagar Sharma",
+    title: "Director, Corporate Governance & Purchase",
+    description:
+      "Sagar Sharma oversees land acquisition, procurement and regulatory compliance at Alchemy Landbase. He works with government bodies, vendors and corporate partners on residential, commercial and golf estate developments, with a focus on site selection, contract negotiations and responsible land use.",
   },
 ];
 
@@ -68,7 +87,7 @@ function MemberCard({
   return (
     <motion.article
       className={`group overflow-hidden rounded-2xl border border-black/10 bg-white/75 shadow-[0_18px_50px_rgba(75,61,26,0.08)] ${
-        featured ? "lg:col-span-2" : ""
+        featured ? "xl:col-span-2" : ""
       }`}
       variants={fadeUp}
       whileHover={{ y: -5 }}
@@ -90,7 +109,9 @@ function MemberCard({
               alt={imageAlt}
               fill
               sizes={
-                featured ? "(min-width: 1024px) 38vw, 50vw" : "(min-width: 1024px) 22vw, 50vw"
+                featured
+                  ? "(min-width: 1024px) 38vw, (min-width: 640px) 45vw, 100vw"
+                  : "(min-width: 1280px) 22vw, (min-width: 640px) 45vw, 100vw"
               }
               className="object-cover object-top transition duration-500 group-hover:scale-[1.02]"
             />
@@ -150,7 +171,7 @@ export default function ExclusiveMembersSection() {
           </p>
         </motion.div>
 
-        <motion.div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8" variants={containerVariants}>
+        <motion.div className="grid grid-cols-1 gap-6 xl:grid-cols-2 lg:gap-8" variants={containerVariants}>
           {members.map((member) => (
             <MemberCard key={member.name} {...member} />
           ))}
