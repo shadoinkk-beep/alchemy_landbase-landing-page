@@ -39,7 +39,7 @@ const members: MemberCardProps[] = [
     featured: true,
   },
   {
-    imageSrc: "/team/prateek-joshi.webp",
+    imageSrc: "/Prateek Joshi.png",
     imageAlt: "Prateek Joshi",
     initials: "PJ",
     name: "Prateek Joshi",
@@ -48,7 +48,7 @@ const members: MemberCardProps[] = [
       "As Senior Director, Prateek Joshi supports Alchemy Landbase's strategic growth and the execution of transparent, future-ready land communities.",
   },
   {
-    imageSrc: "/team/harshit-bhardwaj.webp",
+    imageSrc: "/Harshit Bharadwaj.png",
     imageAlt: "Harshit Bhardwaj",
     initials: "HB",
     name: "Harshit Bhardwaj",
@@ -57,7 +57,7 @@ const members: MemberCardProps[] = [
       "As Senior Manager - Sales, Harshit Bhardwaj helps clients understand each opportunity clearly and guides them through a transparent, considered buying journey.",
   },
   {
-    imageSrc: "/team/akshay-choudhary.webp",
+    imageSrc: "/Akshay Choudhary.jpeg",
     imageAlt: "Akshay Choudhary",
     initials: "AC",
     name: "Akshay Choudhary",
