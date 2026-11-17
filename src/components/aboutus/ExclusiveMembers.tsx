@@ -66,8 +66,8 @@ const members: MemberCardProps[] = [
       "Akshay Choudhary brings experience in sales, business development and marketing from Havells, Guesthouser, Accenture and WPP. He has built a network of 300+ property owners and managed advertising campaigns for brands including Uniqlo, Apollo Tyres and Campus Shoes.",
   },
   {
-    imageAlt: "Photo placeholder for Sagar Sharma",
-    initials: "SS",
+    imageAlt: "/Sagar Sharma.jpeg",
+    initials: "Sagar Sharma",
     name: "Sagar Sharma",
     title: "Director, Corporate Governance & Purchase",
     description:
