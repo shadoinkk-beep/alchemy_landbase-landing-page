@@ -66,9 +66,9 @@ const members: MemberCardProps[] = [
       "Akshay Choudhary brings experience in sales, business development and marketing from Havells, Guesthouser, Accenture and WPP. He has built a network of 300+ property owners and managed advertising campaigns for brands including Uniqlo, Apollo Tyres and Campus Shoes.",
   },
   {
-    imageAlt: "/Sagar Sharma.jpeg",
-    initials: "Sagar Sharma",
-    name: "Sagar Sharma",
+    imageSrc: "/Sagar Sharma.jpeg",
+    imageAlt: "Sagar Sharma",
+    initials: "SS",
     title: "Director, Corporate Governance & Purchase",
     description:
       "Sagar Sharma oversees land acquisition, procurement and regulatory compliance at Alchemy Landbase. He works with government bodies, vendors and corporate partners on residential, commercial and golf estate developments, with a focus on site selection, contract negotiations and responsible land use.",
