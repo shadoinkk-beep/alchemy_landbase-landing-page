@@ -3,12 +3,14 @@ import React from 'react';
 import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi'; 
 
 // --- Placeholder/Mock Logo Component ---
+/*
 const AlchemyLogo: React.FC = () => (
   // This is a simple placeholder to represent the round, dark/gold logo.
   <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center">
     <span className="text-xl font-bold text-[#b89547]">A</span>
   </div>
 );
+*/
 
 // --- Interface and Data (Unchanged) ---
 interface LinkGroup {
@@ -158,7 +160,7 @@ const Footer: React.FC = () => {
 
   </div>
 </div>
-
+</div>
         {/* Bottom Separator Line */}
         <div className="border-t border-gray-300 mt-12"></div>
 
